@@ -1,0 +1,18 @@
+# Audiobook TTS pipeline — install with:  pip install -r requirements.txt
+#
+# Primary engine used in this repo (works fully offline once voices are downloaded,
+# no GPU required, permissive license, voices hosted on GitHub releases):
+piper-tts>=1.2.0
+
+# Bundles a static ffmpeg binary so we can encode WAV -> MP3 without a system install:
+imageio-ffmpeg>=0.5.1
+
+# ---------------------------------------------------------------------------
+# OPTIONAL upgrade engines (better/cloneable voices; need HuggingFace access and,
+# for some, a GPU). The pipeline auto-falls back to Piper if these aren't present.
+# Uncomment the one you want:
+#
+# kokoro>=0.7.0          # Kokoro-82M: fast, very natural, Apache-2.0 (recommended upgrade)
+# soundfile>=0.12.1      # needed by kokoro
+# TTS>=0.22.0            # Coqui XTTS-v2: zero-shot voice cloning (needs GPU for speed)
+# chatterbox-tts         # Resemble AI Chatterbox: expressive, emotion control

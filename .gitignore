@@ -1,0 +1,15 @@
+# Voice models are large and downloaded from GitHub releases (see README) — don't commit.
+voices/
+*.onnx
+*.onnx.json
+*.tar.gz
+
+# Intermediate render artifacts
+build/
+*.wav
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
