@@ -1,0 +1,11 @@
+# Keep large/local-only files out of the web deploy. The site only needs
+# index.html and audio/*.mp3.
+voices/
+build/
+*.onnx
+*.onnx.json
+*.tar.gz
+*.wav
+__pycache__/
+.git/
+BOOK_BIBLE.md
