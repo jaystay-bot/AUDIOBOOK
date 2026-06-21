@@ -28,11 +28,10 @@ jobs:
           mkdir -p _site
           cp index.html _site/
           cp -r audio _site/audio
+          touch _site/.nojekyll
 
-      - name: Configure Pages (enables Pages on first run)
+      - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
